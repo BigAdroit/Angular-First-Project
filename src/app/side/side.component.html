@@ -1,0 +1,28 @@
+<div class="side-menu">
+    <span class="toggle" (click)="toggle()" *ngIf="!isClose"> &#9776; </span>
+    <span class="close" (click)="close()" *ngIf="isClose"> &times; </span>
+
+    <div class="logo" *ngIf="displayContent">
+        <h4> MySchool <span class="orange">Track</span></h4>
+    </div>
+
+    <div class="nav-list" *ngIf="displayContent">
+        <div class="list-con">
+            <div class="list-border">
+                <a >
+                    <div class="list" (click)="onDisplayTouch()"> My Colleges </div>
+                </a>
+            </div>
+            <div *ngIf="displayCollege">
+                <div *ngFor="let c of Colleges" class="sub-list"
+                    [class.selected]="c === selectedCollege"
+                >
+                    <a > 
+                        <div (click)="showDetails(c)">  {{ c.name | uppercase}} </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-content [college]="selectedCollege"></app-content>

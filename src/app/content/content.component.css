@@ -1,0 +1,51 @@
+.circle {
+    height: 3rem;
+    width:3rem;
+    background-color: gray;
+    border-radius: 50%;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+table {
+    width: 100%;
+    border: none;
+}
+th, td {
+    text-align: left;
+}
+td, th {
+    padding: 0.5rem 1rem;
+}
+tr:nth-child(even) {
+    background-color: orange;
+    color:white;
+}
+.tr-heading {
+    background-color: rgb(70,70,112);
+    color:white;
+    border-radius: 5px;
+}
+.card-container {
+    background-color: rgb(227, 225, 225);
+    padding: 2%;
+    width:100%;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    margin:1rem 0;
+    gap:1%;
+    border-radius:5px;
+}
+.cards {
+    box-shadow: 4px 4px 8px gray;
+    border-radius:5px;
+    background-color: white;
+    margin:0.5rem 0;
+    padding:4% 7%;
+}
+.view {
+    cursor:pointer;
+}

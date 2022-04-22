@@ -1,1 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content {
+    margin-left:15%;
+    width:85%;
+    background-color: rgb(190,190,196);
+    /* height: 100vh; */
+    padding:2%;
+}
+.flex-space-between {
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.box {
+    min-width:10rem;
+    background-color: white;
+    padding:1% 1.5%;
+    border-radius: 5px;
+    border-right:3px solid orange;
+}
+.card-container-table {
+    /* height: 40vh; */
+    margin:2rem 0;
+    background-color: rgb(227,225,225);
+    width: 100%;
+    color:black;
+    border-radius: 10px;
+    padding:2%;
+    overflow-x: hidden;
+    overflow: scroll;
+}
+h5 {
+    margin-left: 0.3rem;
+}
+.toggle {
+    margin-right: 1.5em;
+    display: none;
+    cursor:pointer;
+    font-family: cursive;
+    font-size: 2rem;
+    color:white;
+    display:flex;
+    justify-content: center;
+    margin:3%;
+}
+.close {
+    position:relative;
+    left: 80%;
+    font-family: cursive;
+    font-size: 2rem;
+    top:0;
+    cursor:pointer;
+    color:white;
+}
+/*  my Media query  */
+@media (max-width: 1200px) {
+    
+    .content {
+        margin-left:7%;
+        width:93%;
+    }
+
+}
+

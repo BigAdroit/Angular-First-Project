@@ -1,0 +1,100 @@
+<div class="content">
+    <div class="flex-space-between">
+        <h4>  
+            Dashboard / {{ departmentDetails.name }} Department
+        </h4>
+
+        <div class="flex-space-between box">
+            <div class="circle">
+                NA
+            </div>
+            <div>
+                <h5> {{ departmentDetails.dean }}</h5>
+                <p>HOD</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="cards">
+            <h5> Total numbers of lectureres</h5>
+            <div class=" flex-space-between box">
+                <div>
+                    <div class="">
+                        <h1 class="green">{{departmentDetails.lecturers}}</h1>
+                    </div>
+                </div>
+                <div>
+                    <div class="">
+                        <img src="../../assets/img/Group 11841.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cards">
+            <h5> Total numbers of students </h5>
+            <div class="flex-space-between box">
+                <div>
+                    <div class="">
+                        <h1 class="green"> {{departmentDetails.students}} </h1>
+                    </div>
+                </div>
+                <div>
+                    <div class="">
+                        <img src="../../assets/img/Group 11841.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cards">
+            <h5> Total Number of None Teaching Staffs </h5>
+            <div class="flex-space-between box">
+                <div>
+                    <div class="">
+                        <h1 class="green">50</h1>
+                    </div>
+                </div>
+                <div>
+                    <div class="">
+                        <img src="../../assets/img/Group 11850.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-container-table">
+        <div>
+            {{ college.name }}
+        </div>
+        <h4> Department List </h4>
+        <div class="dept-list">
+            <table>
+                <thead>
+                    <tr class="tr-heading">
+                        <th> Name </th>
+                        <th> Dean </th>
+                        <th> Lecturers </th>
+                        <th> Students </th>
+                        <th> Action </th>
+                    </tr>  
+                </thead>
+                <tbody>
+                    <tr *ngFor="let dept of college.department">
+                        <td> {{ dept.name }} </td>
+                        <td> {{ dept.dean }} </td>
+                        <td> {{ dept.lecturers }} </td>
+                        <td> {{ dept.students }} </td>
+                        <td (click)="viewDetails(dept)" class="view"> view <img src="../../assets/img/Vector (7).svg" alt="" srcset=""> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</div>
+
