@@ -8,6 +8,7 @@ import { CollegelistService } from '../collegelist.service';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
+  
   @Input() public college!: college;
 
   departmentDetails : any = ""

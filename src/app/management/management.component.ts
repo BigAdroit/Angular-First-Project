@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./management.component.css']
 })
 export class ManagementComponent implements OnInit {
+  name : string ="=0p- v` f`g1ez"
+
 
   constructor() { }
 

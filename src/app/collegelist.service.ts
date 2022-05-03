@@ -1,4 +1,7 @@
+//  CREATING A SERVICE THAT STORES THE LINK OF AN 
 import { Injectable } from '@angular/core';
+
+// IMPORT THE COLLEGE INTERFACE 
 import { college } from './collegeInterface';
 
 @Injectable({
@@ -7,6 +10,8 @@ import { college } from './collegeInterface';
 export class CollegelistService {
 
   constructor() { }
+  
+// CREATING A FUNCTION THAT RETURNS AN ARRAY OF OBJECT OF TYPE COLLEGE 
 
   getColleges() : college [] {
     return [

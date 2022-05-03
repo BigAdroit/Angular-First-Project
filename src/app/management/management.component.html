@@ -1,1 +1,7 @@
-<p>management works!</p>
+<!--  form validation using Template Driven Method  -->
+<h4> Add Colege to the college list</h4>
+<form #userForm = "ngForm">
+    {{name}}
+    <label for=""> College Name </label>
+    <input type="text" name="college" [(ngModel)]="name">
+</form>

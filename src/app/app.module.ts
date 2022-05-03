@@ -8,6 +8,8 @@ import { CollegeComponent } from './college/college.component';
 import { ManagementComponent } from './management/management.component';
 import { SideComponent } from './side/side.component';
 import { ContentComponent } from './content/content.component';
+import { FormsModule } from '@angular/forms'
+
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import { ContentComponent } from './content/content.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [CollegelistService],
   bootstrap: [AppComponent]

@@ -3,7 +3,7 @@ import { college } from '../collegeInterface';
 import { CollegelistService } from '../collegelist.service';
 
 @Component({
-  selector: 'app-side',
+  selector: '.app-side',
   templateUrl: './side.component.html',
   styleUrls: ['./side.component.css']
 })
@@ -24,6 +24,7 @@ export class SideComponent implements OnInit {
 
   constructor(private collegelist: CollegelistService) { }
 
+  //  INJECTING THE SERVICE CREATING AN INSTANCE OF THE SERVICE
   ngOnInit(): void {
     this.Colleges = this.collegelist.getColleges()
     console.log('The screen width is '+ window.innerWidth)
@@ -35,7 +36,8 @@ export class SideComponent implements OnInit {
       //   this.displayContent = false
       // } 
     },1000 )
-
+    
+    // CONDITION CHECKING THE RESPONSIVENESS 
     if(this.width < 1200) {
       this.displayContent = false
     }
@@ -47,6 +49,7 @@ export class SideComponent implements OnInit {
     }
   }
 
+
   onDisplayTouch() {
     this.displayCollege = !this.displayCollege
   }
@@ -55,6 +58,8 @@ export class SideComponent implements OnInit {
     this.collegeName = data.name
     this.selectedCollege = data
   }
+
+  //  THE TOGGLE OPEING FUNCTION 
   toggle() {
     // gettting the dom of the parent element to increase the width and display details  
     let sideNav = document.querySelector('.side-menu') as HTMLElement
@@ -63,6 +68,7 @@ export class SideComponent implements OnInit {
     this.isClose = true
   }
 
+  // THE TOGGLE CLOSE FUNCTION FOR THE
   close () {
     // gettting the dom of the parent element to decrease the width and close the divs
     let sideNav = document.querySelector('.side-menu') as HTMLElement

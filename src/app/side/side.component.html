@@ -1,4 +1,5 @@
 <div class="side-menu">
+    <!--  FOR THE TOGGLE MENU AND THE CLOSE MENU CONDITIONS  -->
     <span class="toggle" (click)="toggle()" *ngIf="!isClose"> &#9776; </span>
     <span class="close" (click)="close()" *ngIf="isClose"> &times; </span>
 
@@ -25,4 +26,5 @@
         </div>
     </div>
 </div>
+<!--  COMPONENT INTERACTION SENDING DATA TO THE CHILD COMPONENT -->
 <app-content [college]="selectedCollege"></app-content>
